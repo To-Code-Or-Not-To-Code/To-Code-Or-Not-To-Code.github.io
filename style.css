@@ -1,7 +1,7 @@
 .slide-right {
-
+    transform: translateX(50%);
 }
 
 .slide-left {
-    
+
 }
