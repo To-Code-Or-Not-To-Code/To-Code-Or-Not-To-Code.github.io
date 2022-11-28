@@ -284,6 +284,10 @@ strong {
 .slide-right span {
     overflow: hidden;
     animation: slide-right 10s;
+    -webkit-animation: slide-right 10s;
+    -moz-animation: slide-right 10s;
+    -o-animation: slide-right 10s;
+    -ms-animation: slide-right 10s;
 }
 
 .slide-left {
@@ -294,4 +298,8 @@ strong {
 .slide-left span {
     overflow: hidden;
     animation: slide-left 10s;
+    -webkit-animation: slide-left 10s;
+    -moz-animation: slide-left 10s;
+    -o-animation: slide-left 10s;
+    -ms-animation: slide-left 10s;
 }
