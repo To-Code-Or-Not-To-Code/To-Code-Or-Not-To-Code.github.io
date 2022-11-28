@@ -29,12 +29,11 @@
 body {
     color: white;
     background-color: black;
-    font-family: SegoePrint;
+    font-family: "Segoe Print";
 }
 
 strong {
-    font-family: SegoePrint-Bold;
-}
+    font-family: "Segoe Print Bold";
 
 @keyframes slide-left {
     from {
