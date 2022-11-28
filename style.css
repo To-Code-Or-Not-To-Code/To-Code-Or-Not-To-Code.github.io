@@ -47,7 +47,13 @@
 }
 
 .slide-right {
-    transform: translateX(50%);
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-right span {
+    overflow: hidden;
+    animation: slide-right 10s;
 }
 
 .slide-left {
@@ -56,5 +62,6 @@
 }
 
 .slide-left span {
-    animation: slide-left 5s;
+    overflow: hidden;
+    animation: slide-left 10s;
 }
