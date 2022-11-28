@@ -14,5 +14,10 @@
 }
 
 .slide-left {
+    width: 100%;
+    overflow: hidden;
+}
 
+.slide-left span {
+    animation: slide-left 5s;
 }
