@@ -1,3 +1,14 @@
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
 .slide-right {
     transform: translateX(50%);
 }
