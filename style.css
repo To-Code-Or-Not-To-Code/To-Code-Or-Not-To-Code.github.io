@@ -1,3 +1,8 @@
+body {
+    color: white;
+    background-color: black;
+}
+
 @keyframes slide-left {
     from {
         margin-left: 100%;
