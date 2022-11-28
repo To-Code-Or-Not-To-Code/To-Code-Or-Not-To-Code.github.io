@@ -46,8 +46,104 @@ strong {
         width: 100%;
     }
 }
+    
+@-webkit-keyframes slide-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
 
+    to {
+        margin-left: 45%;
+        width: 100%;
+    }
+}
+    
+@-moz-keyframes slide-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 45%;
+        width: 100%;
+    }
+}
+
+@-o-keyframes slide-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 45%;
+        width: 100%;
+    }
+}
+    
+@-ms-keyframes slide-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 45%;
+        width: 100%;
+    }
+}
+    
 @keyframes slide-right {
+    from {
+        margin-right: -100%;
+        width: 300%;
+    }
+
+    to {
+        margin-right: 55%;
+        width: 100%;
+    }
+}
+    
+@-webkit-keyframes slide-right {
+    from {
+        margin-right: -100%;
+        width: 300%;
+    }
+
+    to {
+        margin-right: 55%;
+        width: 100%;
+    }
+}
+    
+@-moz-keyframes slide-right {
+    from {
+        margin-right: -100%;
+        width: 300%;
+    }
+
+    to {
+        margin-right: 55%;
+        width: 100%;
+    }
+}
+    
+@-o-keyframes slide-right {
+    from {
+        margin-right: -100%;
+        width: 300%;
+    }
+
+    to {
+        margin-right: 55%;
+        width: 100%;
+    }
+}
+    
+@-ms-keyframes slide-right {
     from {
         margin-right: -100%;
         width: 300%;
@@ -70,7 +166,55 @@ strong {
         height: 100%;
     }
 }
+    
+@-webkit-keyframes slide-up {
+    from {
+        margin-top: 100%;
+        height: 300%;
+    }
 
+    to {
+        margin-top: 45%;
+        height: 100%;
+    }
+}
+
+@-moz-keyframes slide-up {
+    from {
+        margin-top: 100%;
+        height: 300%;
+    }
+
+    to {
+        margin-top: 45%;
+        height: 100%;
+    }
+}
+    
+@-o-keyframes slide-up {
+    from {
+        margin-top: 100%;
+        height: 300%;
+    }
+
+    to {
+        margin-top: 45%;
+        height: 100%;
+    }
+}
+    
+@-ms-keyframes slide-up {
+    from {
+        margin-top: 100%;
+        height: 300%;
+    }
+
+    to {
+        margin-top: 45%;
+        height: 100%;
+    }
+}
+    
 @keyframes slide-down {
     from {
         margin-bottom: -100%;
@@ -82,6 +226,55 @@ strong {
         height: 100%;
     }
 }
+    
+@-webkit-keyframes slide-down {
+    from {
+        margin-bottom: -100%;
+        height: 300%;
+    }
+
+    to {
+        margin-bottom: 55%;
+        height: 100%;
+    }
+}
+
+@-moz-keyframes slide-down {
+    from {
+        margin-bottom: -100%;
+        height: 300%;
+    }
+
+    to {
+        margin-bottom: 55%;
+        height: 100%;
+    }
+}
+
+@-o-keyframes slide-down {
+    from {
+        margin-bottom: -100%;
+        height: 300%;
+    }
+
+    to {
+        margin-bottom: 55%;
+        height: 100%;
+    }
+}
+
+@-ms-keyframes slide-down {
+    from {
+        margin-bottom: -100%;
+        height: 300%;
+    }
+
+    to {
+        margin-bottom: 55%;
+        height: 100%;
+    }
+}
+
 
 .slide-right {
     width: 100%;
