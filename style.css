@@ -288,6 +288,11 @@ strong {
     -moz-animation: slide-right 10s;
     -o-animation: slide-right 10s;
     -ms-animation: slide-right 10s;
+    -webkit-transition: all 4s ease;
+    -moz-transition: all 4s ease;
+    -ms-transition: all 4s ease;
+    -o-transition: all 4s ease;
+    transition: all 4s ease;
 }
 
 .slide-left {
@@ -302,4 +307,9 @@ strong {
     -moz-animation: slide-left 10s;
     -o-animation: slide-left 10s;
     -ms-animation: slide-left 10s;
+    -webkit-transition: all 4s ease;
+    -moz-transition: all 4s ease;
+    -ms-transition: all 4s ease;
+    -o-transition: all 4s ease;
+    transition: all 4s ease;
 }
