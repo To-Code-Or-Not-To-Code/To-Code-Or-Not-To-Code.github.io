@@ -1,3 +1,5 @@
+import { createApp } from "vue"
+
 let url = new URL(window.location.href);
 
 createApp({
