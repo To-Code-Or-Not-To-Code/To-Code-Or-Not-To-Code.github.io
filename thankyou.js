@@ -1,6 +1,6 @@
-import { createApp } from "https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.min.js"
-
 let url = new URL(window.location.href);
+
+const { createApp } = Vue;
 
 createApp({
     data() {
@@ -8,4 +8,4 @@ createApp({
             app: url.searchParams.get("app")
         }
     }
-}).mount("body");
+});
