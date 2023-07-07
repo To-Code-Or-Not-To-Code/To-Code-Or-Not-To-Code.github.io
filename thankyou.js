@@ -5,7 +5,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            app: url.searchParams.get("app").replace("-", " ")
+            app: url.searchParams.get("app").replace("+", " ")
         }
     }
 }).mount("html");
