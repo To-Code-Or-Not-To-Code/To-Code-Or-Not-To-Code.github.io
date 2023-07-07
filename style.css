@@ -43,6 +43,10 @@ h6 {
     font-family: "Segoe Print" !important;
 }
 
+.hidden {
+    display: none;
+}
+
 .title-left-skew {
     margin-left: 25%;
 }
