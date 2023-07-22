@@ -67,6 +67,7 @@
 
 body {
     color: white;
+    font-family: "Segoe Script";
     background-color: var(--background-primary);
     overflow: scroll;
     overflow-x: hidden;
@@ -90,6 +91,10 @@ body::-webkit-scrollbar-thumb {
 main {
     margin-left: 5rem;
     padding: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 .navbar {
