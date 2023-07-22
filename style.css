@@ -96,6 +96,7 @@ main {
     position: fixed;
     background-color: var(--background-secondary);
     transition: width 500ms ease;
+    z-index: 3;
 }
 
 .navbar-nav {
