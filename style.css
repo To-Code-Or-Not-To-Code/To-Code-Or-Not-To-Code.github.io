@@ -236,11 +236,16 @@ section {
     background-color: var(--background-primary);
 }
 
+.dark2 {
+    background-color: var(--background-secondary);
+}
+
 .curve {
     position: absolute;
     height: 225px;
     width: 100%;
     bottom: 0px;
+    z-index: 5;
 }
 
 .curve::before {
@@ -251,7 +256,7 @@ section {
     width: 55%;
     height: 100%;
     background-color: var(--background-secondary);
-    transform: translate(85%, 60%);
+    transform: translate(85%, 65%);
 }
 
 .curve::after {
@@ -262,8 +267,12 @@ section {
     width: 55%;
     height: 100%;
     background-color: var(--blue);
-    transform: translate(-4%, 40%);
+    transform: translate(-1%, 40%);
     z-index: -1;
+}
+
+.bubble {
+    z-index: 2;
 }
 
 .bubble::after {
@@ -275,7 +284,7 @@ section {
     height: 85%;
     width: 100%;
     background-color: var(--background-primary);
-    z-index: -1;
+    z-index: -2;
 }
 
 .svg-wave-opacity-top {
