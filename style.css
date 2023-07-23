@@ -61,12 +61,10 @@
     --background-primary: #0f0f0f;
     --background-secondary: #202731;
     --transition-speed: 900;
+    --mouse-x: 50vw;
+    --mouse-y: 50vh;
     font-size: 16px;
     font-family: "Prompt", sans-serif;
-}
-
-* {
-    cursor: none !important;
 }
 
 body {
@@ -90,11 +88,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background-color: #6649b8;
-}
-
-#cursor {
-    position: absolute;
-    z-index: 20;
 }
 
 main {
