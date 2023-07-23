@@ -14,3 +14,9 @@ const anim = KUTE.fromTo(
 );
 
 anim.start();
+
+document.addEventListener("mousemove", function (event) {
+    let cursor = document.getElementById("cursor");
+    cursor.style.top = `${event.pageY - 20}px`;
+    cursor.style.left = `${event.pageX + 14}px`;
+});
