@@ -181,6 +181,10 @@ h1 {
         justify-content: center;
     }
 
+    html body .hidden {
+        transition: none;
+    }
+
     main {
         margin: 0px;
         padding: 0px;
