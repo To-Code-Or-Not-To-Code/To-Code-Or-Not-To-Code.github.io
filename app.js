@@ -1,27 +1,33 @@
-let icon = document.querySelector("#theIcon"),
-    half1 = document.querySelector("#half1"),
-    half2 = document.querySelector("#half2");
-
-let tocode = document.querySelector("#tocode"),
-    dev = document.querySelector("#dev");
-
-icon.classList.add("centered-image")
-
-function onMouseOut() {
-    icon.classList.remove("hidden");
-    half1.classList.add("hidden");
-    half2.classList.add("hidden");
+if ("serviceworker" in window.navigator) {
+    window.navigator.serviceWorker.register("./generate-sw.js");
 }
 
-icon.addEventListener("mouseover", function () {
-    console.log("activated");
-    icon.classList.add("hidden");
-    half1.classList.remove("hidden");
-    half2.classList.remove("hidden");
-});
-half1.addEventListener("mouseout", onMouseOut);
+const anim = KUTE.fromTo(
+    "#blob1",
+    {
+        path: "#blob1",
+    },
+    {
+        path: "#blob2",
+    },
+    {
+        repeat: 999,
+        duration: 3000,
+        yoyo: true,
+    }
+);
 
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-    alert("Why u right clicking?");
+anim.start();
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
 });
+
+const hidden = document.querySelectorAll(".hidden");
+hidden.forEach((el) => observer.observe(el));
