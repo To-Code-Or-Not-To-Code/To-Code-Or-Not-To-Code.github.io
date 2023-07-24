@@ -1,7 +1,3 @@
-if ("serviceworker" in window.navigator) {
-    window.navigator.serviceWorker.register("./generate-sw.js");
-}
-
 const anim = KUTE.fromTo(
     "#blob1",
     {

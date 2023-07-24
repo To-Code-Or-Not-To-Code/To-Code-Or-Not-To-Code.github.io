@@ -29,6 +29,11 @@
         />
         <link rel="manifest" href="./manifest.webmanifest" />
         <link rel="stylesheet" href="./style.css" />
+        <script>
+            if ("serviceworker" in window.navigator) {
+                window.navigator.serviceWorker.register("./generate-sw.js");
+            }
+        </script>
     </head>
 
     <body>
