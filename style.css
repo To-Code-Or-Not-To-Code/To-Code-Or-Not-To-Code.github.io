@@ -189,10 +189,14 @@ h1 {
 
 /* Large Screens */
 @media only screen and (min-width: 600px) {
+    body {
+        zoom: 80%;
+    }
+
     .navbar {
         top: 0px;
         width: 5rem;
-        height: 100vh;
+        height: 100%;
     }
 
     .navbar:hover {
