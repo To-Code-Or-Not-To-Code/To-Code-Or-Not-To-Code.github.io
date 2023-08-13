@@ -21,17 +21,17 @@ const OFFLINE_URL = "index.html";
 // Add to Cache function
 const addResourcesToCache = async (resources) => {
     // Generate cache named the constant CACHE_NAME
-    const cache = await caches.open(CACHE_NAME);
+    const c = await caches.open(CACHE_NAME);
 
     // Await for adding the resources to the cache
-    await cache.addAll(resources);
+    await c.addAll(resources);
 };
 
 // Add in cache when there is a "Cache Miss"
 
 const putInCache = async (request, response) => {
-    const cache = await cache.open(CACHE_NAME);
-    await cache.put(request, response);
+    const c = await cache.open(CACHE_NAME);
+    await c.put(request, response);
 };
 
 // Implement the cache miss trigger and add a fallback
@@ -63,7 +63,6 @@ const cacheFirst = async ({ request, fallbackURL }) => {
     }
 };
 
-
 const deleteCache = async (key) => {
     await caches.delete(key);
 };
@@ -76,8 +75,6 @@ const deleteOldCaches = async () => {
     );
     await Promise.all(cachesToDelete.map(deleteCache));
 };
-
-
 
 /*self.addEventListener("install", (event) => {
     event.waitUntil(
