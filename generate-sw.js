@@ -27,6 +27,58 @@ const addResourcesToCache = async (resources) => {
     await cache.addAll(resources);
 };
 
+// Add in cache when there is a "Cache Miss"
+
+const putInCache = async (request, response) => {
+    const cache = await cache.open(CACHE_NAME);
+    await cache.put(request, response);
+};
+
+// Implement the cache miss trigger and add a fallback
+
+const cacheFirst = async ({ request, fallbackURL }) => {
+    const responseFromCache = await caches.match(request);
+
+    if (responseFromCache) {
+        return responseFromCache;
+    }
+
+    try {
+        const responseFromNetwork = await fetch(request);
+        putInCache(request, responseFromNetwork.clone());
+        return responseFromNetwork;
+    } catch (error) {
+        const fallbackResponse = await caches.match(fallbackURL);
+
+        if (fallbackResponse) {
+            return fallbackResponse;
+        }
+
+        // Fallback failed
+
+        return new Response("Network Error Occured", {
+            status: 408,
+            headers: { "Content-Type": "text/plain" },
+        });
+    }
+};
+
+
+const deleteCache = async (key) => {
+    await caches.delete(key);
+};
+
+const deleteOldCaches = async () => {
+    const cacheKeepList = [`v${OFFLINE_VERSION}`];
+    const keys = await caches.keys();
+    const cachesToDelete = keyList.filter(
+        (key) => !cacheKeepList.includes(key)
+    );
+    await Promise.all(cachesToDelete.map(deleteCache));
+};
+
+
+
 /*self.addEventListener("install", (event) => {
     event.waitUntil(
         (async () => {
@@ -144,42 +196,6 @@ self.addEventListener("activate", (event) => {
     // were no service worker involvement.
 });*/
 
-// Add in cache when there is a "Cache Miss"
-
-const putInCache = async (request, response) => {
-    const cache = await cache.open(CACHE_NAME);
-    await cache.put(request, response);
-};
-
-// Implement the cache miss trigger and add a fallback
-
-const cacheFirst = async ({ request, fallbackURL }) => {
-    const responseFromCache = await caches.match(request);
-
-    if (responseFromCache) {
-        return responseFromCache;
-    }
-
-    try {
-        const responseFromNetwork = await fetch(request);
-        putInCache(request, responseFromNetwork.clone());
-        return responseFromNetwork;
-    } catch (error) {
-        const fallbackResponse = await caches.match(fallbackURL);
-
-        if (fallbackResponse) {
-            return fallbackResponse;
-        }
-
-        // Fallback failed
-
-        return new Response("Network Error Occured", {
-            status: 408,
-            headers: { "Content-Type": "text/plain" },
-        });
-    }
-};
-
 // Have it look up the resource in the cache when items are being fetched to speed up
 self.addEventListener("fetch", (event) => {
     event.respondWith(
@@ -189,16 +205,3 @@ self.addEventListener("fetch", (event) => {
         })
     );
 });
-
-const deleteCache = async (key) => {
-    await caches.delete(key);
-};
-
-const deleteOldCaches = async () => {
-    const cacheKeepList = [`v${OFFLINE_VERSION}`];
-    const keys = await caches.keys();
-    const cachesToDelete = keyList.filter(
-        (key) => !cacheKeepList.includes(key)
-    );
-    await Promise.all(cachesToDelete.map(deleteCache));
-};
