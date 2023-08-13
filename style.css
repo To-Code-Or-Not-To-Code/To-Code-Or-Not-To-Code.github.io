@@ -329,7 +329,7 @@ section {
 }
 
 .flip {
-    transform: rotate(90deg scaleX(-1));
+    transform: rotate(90deg) scaleX(-1);
 }
 
 .blob-motion {
