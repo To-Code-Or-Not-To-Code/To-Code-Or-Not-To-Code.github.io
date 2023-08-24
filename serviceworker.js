@@ -13,7 +13,7 @@ Copyright 2015, 2019 Google Inc. All Rights Reserved.
 
 // Incrementing OFFLINE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
-const OFFLINE_VERSION = 2;
+const OFFLINE_VERSION = 3;
 const CACHE_NAME = `v${OFFLINE_VERSION}`;
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "index.html";
@@ -70,9 +70,7 @@ const deleteCache = async (key) => {
 const deleteOldCaches = async () => {
     const cacheKeepList = [`v${OFFLINE_VERSION}`];
     const keys = await caches.keys();
-    const cachesToDelete = keyList.filter(
-        (key) => !cacheKeepList.includes(key)
-    );
+    const cachesToDelete = keys.filter((key) => !cacheKeepList.includes(key));
     await Promise.all(cachesToDelete.map(deleteCache));
 };
 
