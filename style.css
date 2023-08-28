@@ -60,6 +60,7 @@
     --text-secondary: #ececec;
     --background-primary: #0f0f0f;
     --background-secondary: #202731;
+    --purple: #6600ff;
     --transition-speed: 900;
     --mouse-x: 50vw;
     --mouse-y: 50vh;
@@ -326,6 +327,10 @@ section {
 
 .layer2 {
     background-image: url("./layer2.svg");
+}
+
+.layer3 {
+    background-image: url("./layer3.svg");
 }
 
 .flip {
