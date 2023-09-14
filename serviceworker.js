@@ -13,7 +13,7 @@ Copyright 2015, 2019 Google Inc. All Rights Reserved.
 
 // Incrementing OFFLINE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
-const OFFLINE_VERSION = 4;
+const OFFLINE_VERSION = 5;
 const CACHE_NAME = `v${OFFLINE_VERSION}`;
 // Customize this with a different URL if needed.
 const OFFLINE_URL = "index.html";
@@ -91,8 +91,10 @@ self.addEventListener("install", (event) => {
     event.waitUntil(
         addResourcesToCache([
             "/",
+            "/*",
             "/index.html",
             "/style.css",
+            "/discord.html",
             "/app.js",
             "/thankyou.html",
             "/thankyou.js",
