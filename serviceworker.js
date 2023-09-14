@@ -74,6 +74,8 @@ const deleteOldCaches = async () => {
     await Promise.all(cachesToDelete.map(deleteCache));
 };
 
+deleteOldCaches();
+
 /*self.addEventListener("install", (event) => {
     event.waitUntil(
         (async () => {
