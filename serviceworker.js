@@ -74,8 +74,6 @@ const deleteOldCaches = async () => {
     await Promise.all(cachesToDelete.map(deleteCache));
 };
 
-deleteOldCaches();
-
 /*self.addEventListener("install", (event) => {
     event.waitUntil(
         (async () => {
@@ -92,8 +90,6 @@ self.addEventListener("install", (event) => {
     // Waits until the everything has been added to cache
     event.waitUntil(
         addResourcesToCache([
-            "/",
-            "/*",
             "/index.html",
             "/style.css",
             "/discord.html",
