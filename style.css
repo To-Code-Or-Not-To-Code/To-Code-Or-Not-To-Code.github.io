@@ -344,7 +344,7 @@ section {
 }
 
 .blurred {
-    filter: blur(50px);
+    filter: blur(25px);
     transition: all 5s;
 }
 
