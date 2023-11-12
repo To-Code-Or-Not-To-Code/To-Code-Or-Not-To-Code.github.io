@@ -31,9 +31,9 @@ anim.start();
 let content = document.querySelector("main");
 
 content.addEventListener("mouseover", function () {
-    content.classList.add("show");
+    content.classList.add("not-blurred");
 });
 
 content.addEventListener("mouseleave", function () {
-    content.classList.remove("show");
+    content.classList.remove("not-blurred");
 });

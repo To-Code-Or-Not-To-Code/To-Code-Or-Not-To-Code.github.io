@@ -343,10 +343,9 @@ section {
     z-index: 0;
 }
 
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 1s;
+.blurred {
+    filter: blur(50px);
+    transition: all 10s;
 }
 
 @media (prefers-reduced-motion) {
@@ -355,8 +354,6 @@ section {
     }
 }
 
-.show {
-    opacity: 1;
+.not-blurred {
     filter: blur(0);
-    transform: translateX(0%);
 }
