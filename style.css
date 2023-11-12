@@ -344,8 +344,8 @@ section {
 }
 
 .blurred {
-    filter: blur(25px);
-    transition: all 5s;
+    filter: blur(50px);
+    transition: all 3s;
 }
 
 @media (prefers-reduced-motion) {
