@@ -29,8 +29,16 @@
         transform: rotate(0deg);
     }
 
+    25% {
+        transform: rotate(90deg);
+    }
+
     50% {
         transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(-90deg);
     }
 
     100% {
@@ -43,12 +51,20 @@
         transform: rotate(360deg);
     }
 
+    25% {
+        transform: rotate(-90deg);
+    }
+
     50% {
         transform: rotate(-180deg);
     }
 
+    75% {
+        transform: rotate(90deg);
+    }
+
     100% {
-        transform: rotate(00deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -121,7 +137,7 @@ h1 {
     width: 100%;
 }
 
-.nav-item:last-child {
+.nav-item:nth-last-child(2) {
     margin-top: auto;
 }
 
