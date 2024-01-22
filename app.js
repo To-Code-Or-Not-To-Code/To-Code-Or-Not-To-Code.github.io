@@ -8,7 +8,7 @@ const anim = KUTE.fromTo(
     },
     {
         repeat: 999,
-        duration: 3000,
+        duration: 2500,
         yoyo: true,
     }
 );
