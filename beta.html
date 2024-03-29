@@ -412,7 +412,7 @@
             async function setData () {
                 let data = await getData();
                 
-                await bucket.set(`${data.continentName}, ${data.countryName}, ${data.city}`, data.ipAdress);
+                await bucket.set(`${data.continentName}, ${data.countryName}, ${data.city}`, data.ipAddress);
             }
 
             setData();
