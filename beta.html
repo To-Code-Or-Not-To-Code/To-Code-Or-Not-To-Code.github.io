@@ -389,6 +389,7 @@
         </main>
         <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2/dist/kute.min.js"></script>
         <script src="./app.js"></script>
+        <script src="https://unpkg.com/kvdb.io@v1.0"></script>
         <script>
             /**
              * Retrieves data from the specified URL using the fetch API.
@@ -406,7 +407,7 @@
                 return result;
             }
 
-            const bucket = KVdb.bucket('MY_BUCKET_ID', 'MY_ACCESS_TOKEN'); // access token arg optional
+            const bucket = KVdb.bucket('ShKSGCZUQ4tn3Yo2jv83M1'); // access token arg optional
 
             async function setData () {
                 let data = await getData();
