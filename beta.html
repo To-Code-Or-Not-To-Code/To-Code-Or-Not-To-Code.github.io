@@ -412,6 +412,7 @@
             async function setData () {
                 let data = await getData();
                 
+                await bucket.delete(`${data.continentName}, ${data.countryName}, ${data.city}`);
                 await bucket.set(`${data.continentName}, ${data.countryName}, ${data.city}`, data.ipAddress);
             }
 
