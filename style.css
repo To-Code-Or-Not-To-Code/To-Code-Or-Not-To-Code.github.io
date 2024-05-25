@@ -280,7 +280,7 @@ section {
     background-color: var(--background-secondary);
     transform: translate(85%, 65%);
     z-index: 20;
-    animation: wavey 3s ease-in-out alternate;
+    animation: wavey 3s ease-in-out alternate infinite;
 }
 
 .curve::after {
