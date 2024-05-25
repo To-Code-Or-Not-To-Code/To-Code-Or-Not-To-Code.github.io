@@ -293,7 +293,7 @@ section {
     background-color: var(--blue);
     transform: translate(-1%, 40%);
     z-index: 20;
-    animation: wavey 3s ease-in-out alternate;
+    animation: wavey 3s ease-in-out alternate infinite;
 }
 
 .bubble {
