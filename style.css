@@ -211,11 +211,13 @@ h1 {
     }
 
     .logo svg {
-        animation: spin-reverse 1s ease-in-out;
+        /* animation: spin-reverse 1s ease-in-out; */
+        transition: transform var(--transition-speed) ease-in-out;
     }
 
     .navbar:hover .logo svg {
-        animation: spin 1s ease-in-out;
+        /* animation: spin 1s ease-in-out; */
+        transform: rotate(360deg);
     }
 
     .navbar:hover .link-text {
