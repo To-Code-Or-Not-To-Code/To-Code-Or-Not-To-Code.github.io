@@ -1,1 +1,2 @@
-include: [".well-known/", "./well-known/discord"]
+include: 
+  - .well-known
